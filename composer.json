@@ -1,0 +1,54 @@
+{
+    "name": "talovicnedim/laravel-queue-prefix",
+    "description": "Add prefix your laravel queues to support multiple environments.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nedim Talovic",
+            "email": "talovicnedim@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "talovicnedim",
+        "laravel",
+        "laravel-queue-prefix"
+    ],
+    "homepage": "https://github.com/talovicnedim/laravel-queue-prefix",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.50|^9.0|^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.25",
+        "laravel/pint": "^1.6",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Talovicnedim\\LaravelQueuePrefix\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Talovicnedim\\LaravelQueuePrefix\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Talovicnedim\\LaravelQueuePrefix\\QueuePrefixServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/pint",
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
