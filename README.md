@@ -29,7 +29,7 @@ You can publish the configuration file with:
 php artisan vendor:publish --provider="Talovicnedim\LaravelQueuePrefix\QueuePrefixServiceProvider"
 ```
 
-This will create a **`laravel-queue-prefix.php`** file in your config directory.
+This will create a **`queue-prefix.php`** file in your config directory.
 
 ## Usage
 
@@ -50,6 +50,10 @@ For example, if you have a queue named emails, and your prefix is set to `prod` 
 
 If prefixing is disabled, the package will not modify the names of queues before they are dispatched.
 
+## Documentation
+
+You can learn more about how the package works by reading the [blog post](https://nedimtalovic.dev/laravel-queue-prefix) I published.
+
 ## Testing
 
 You can run the tests with:
@@ -60,8 +64,8 @@ composer test
 
 ## Credits
 
-* Nedim Talovic 
-* All Contributors
+* [Nedim Talovic](https://github.com/talovicnedim) 
+* [All Contributors](https://github.com/talovicnedim/laravel-queue-prefix/graphs/contributors)
 
 ## License
 
