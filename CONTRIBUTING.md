@@ -35,6 +35,6 @@ If you have an idea for a new feature or enhancement, please open a new issue on
 
 ## Contact
 
-If you have any questions or concerns, please contact the project maintainer(s) at [email address or other contact information].
+If you have any questions or concerns, please contact the project maintainer(s) at [hello@nedimtalovic.dev](mailto:hello@nedimtalovic.dev)
 
 Thank you for contributing to Laravel Queue Prefix! We appreciate your help in making our project better.
