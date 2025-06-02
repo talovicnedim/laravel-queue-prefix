@@ -18,12 +18,12 @@
     "homepage": "https://github.com/talovicnedim/laravel-queue-prefix",
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^8.50|^9.0|^10.0"
+        "illuminate/support": "^8.50|^9.0|^10.0|^11.0|^12.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.25",
+        "orchestra/testbench": "^6.25|^7.0|^8.0|^9.0|^10.0",
         "laravel/pint": "^1.6",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^9.0|^10.0|^11.0|^12.0"
     },
     "autoload": {
         "psr-4": {

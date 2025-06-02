@@ -26,6 +26,12 @@ class CustomDispatcher extends Dispatcher
             return parent::dispatchToQueue($command);
         }
 
+        // Use default queue name from config if none is provided
+        if (empty($command->queue)) {
+            $defaultQueue = config('queue.connections.' . config('queue.default') . '.queue', 'default');
+            $command->queue = $defaultQueue;
+        }
+
         if (! $this->shouldBePrefixed($command->queue)) {
             return parent::dispatchToQueue($command);
         }
@@ -36,10 +42,14 @@ class CustomDispatcher extends Dispatcher
     /**
      * Determine whether the queue name should be prefixed.
      */
-    protected function shouldBePrefixed(string $queue): bool
+    protected function shouldBePrefixed(?string $queue): bool
     {
-        $allowedQueues = config('queue-prefix.allowed_queues');
-        $excludedQueues = config('queue-prefix.excluded_queues');
+        if (empty($queue)) {
+            return false; // just in case
+        }
+
+        $allowedQueues = config('queue-prefix.allowed_queues', ['*']);
+        $excludedQueues = config('queue-prefix.excluded_queues', []);
 
         if (in_array($queue, $excludedQueues)) {
             return false;
